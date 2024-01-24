@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bookshelf Apps</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Bookshelf Apps</h1>
+    <div class="book-form">
+      <label for="title">Judul:</label>
+      <input type="text" id="title" placeholder="Judul" required>
+      <label for="author">Penulis:</label>
+      <input type="text" id="author" placeholder="Penulis" required>
+      <label for="year">Tahun Terbit:</label>
+      <input type="number" id="year" placeholder="Tahun Terbit" required>
+      <label for="isComplete">Sudah di Baca:</label>
+      <input type="checkbox" id="isComplete">
+      <button onclick="addBook()">Tambahkan Buku</button>
+    </div>
+    <div class="book-search">
+      <input type="text" id="search" placeholder="Cari">
+      <button onclick="searchBooks()">Cari</button>
+    </div>
+    <div class="bookshelves">
+      <h2>Belum di Baca</h2>
+      <div class="shelf" id="unfinishedShelf">
+      </div>
+      <h2>Selesai di Baca</h2>
+      <div class="shelf" id="finishedShelf">
+      </div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Naufal Hidayat. Belajar Web Dasar di <a href="https://www.dicoding.com/" target="_blank">Dicoding</a></p>
+    </div>
+  </div>
+
+  <div class="modal" id="deleteModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p>Apakah kamu yakin untuk menghapus buku ini?</p>
+      <button onclick="deleteBook()">Hapus</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
